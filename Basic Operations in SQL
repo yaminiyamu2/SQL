@@ -8,3 +8,33 @@ ORDER BY                                          Exists
 GROUP BY                                          Any,All
 Insert Into                                       select into
 HAVING                                            Insert into select
+
+***Select Query:
+   ---------------
+The SELECT statement is used to select data from a database.
+Two Types of SELECT’s
+SELECT	: The SELECT statement is used to select data from  a database.
+SELECT DISTINCT : The SELECT DISTINCT statement is used  to return only distinct (diﬀerent) values.
+
+-->SELECT QUARY:
+    Syntax:
+    SELECT column1, column2, ... FROM table_name;
+    SELECT * FROM table_name;
+-->SELECT DISTINCT:
+    Syntax:
+    SELECT DISTINCT	column1, column2, ... FROM  table_name;
+    SELECT COUNT(DISTINCT Column)* FROM table_name;
+
+***UPDATE QUERY:
+   --------------
+The UPDATE statement is used to modify the existing records in a table.
+Syntax:
+UPDATE table_name SET column1 = value1, column2 = value2, ...WHERE condition;
+
+***DELETE QUERY:
+   -------------
+The DELETE statement is used to delete existing records in a table.
+Syntax:
+DELETE FROM table_name WHERE condition;
+
+
