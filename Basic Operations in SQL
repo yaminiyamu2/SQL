@@ -1,0 +1,10 @@
+Select                                            Like
+Update                                            In
+Delete                                            Between
+Where                                             Alias
+Null Values                                       Wildcards
+AND , OR, NOT                                     Union
+ORDER BY                                          Exists
+GROUP BY                                          Any,All
+Insert Into                                       select into
+HAVING                                            Insert into select
