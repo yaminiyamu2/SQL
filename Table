@@ -1,0 +1,35 @@
+***Creating Database & Table
+      syntax:
+      CREATE DATABASE database_name;
+
+***Deleteing Database:
+      syntax:
+      DROP DATABASE database_name;
+
+***Backup Database:
+      syntax:
+      BACKUP DATABASE databasename
+         TO DISK='file path';
+
+***Creating Table:
+      syntax:
+      CREATE TABLE table_name(column1 database,column2 database.....);
+
+***Deleteing Table:
+      drop or delete table.
+      syntax:
+      DROP TABLE table_name;
+
+***Alter Table:
+       ALTER TABLE - ADD Column
+        Syntax:
+        ALTER TABLE table_name
+        ADD column_name datatype;
+
+***INSERTINTO QUERY:
+      The INSERT INTO statement is used to insert new records in a table.
+      Insert into Syntax:
+      INSERT INTO table_name (column1, column2, column3, ...) VALUES (value1, value2, value3, ...); 
+
+
+
