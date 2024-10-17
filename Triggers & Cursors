@@ -1,0 +1,45 @@
+***Triggers :
+  ------------
+A trigger is a block of code that is executed automatically from a database statement. 
+Triggers is generally executed for DML statements such as INSERT, UPDATE or DELETE.
+SYNTAX :
+CREATE OR REPLACE TRIGGER <trigger-name>
+[BEFORE/AFTER]	[INSERT/UPDATE/DELETE]
+OF<column-name>
+ON<table-name>
+[REFERENCING OLD AS O NEW AS N]
+[FOR EACH ROW]
+WHEN <trigger-condition>
+DECLARE
+BEGIN
+<sql-statement> END;
+
+*** Cursors :
+    ---------
+A cursor in SQL is a temporary work area created in system memory when a SQL statement  is executed. A SQL cursor is a set of rows together with a pointer
+that identiﬁes a current  row. It is a database object to retrieve data from a result set one row at a time.
+Types of Cursors in SQL
+There are the following two types of cursors in SQL:
+1.Implicit Cursor
+2.Explicit Cursor
+Main components of Cursors:
+->Each cursor contains the followings 5 parts,
+->Declare Cursor: In this part, we declare variables and return a set of values.
+->Open: This is the entering part of the cursor.
+->Fetch: Used to retrieve the data row by row from a cursor.
+->Close: This is an exit part of the cursor and used to close a cursor.
+->Deallocate: In this part, we delete the cursor deﬁnition and release all the  system resources associated with the cursor.
+
+***Cursor Scope:
+   --------------
+Microsoft SQL Server supports the GLOBAL and LOCAL keywords on the DECLARE CURSOR statement to  deﬁne the scope of the cursor name.
+GLOBAL - speciﬁes that the cursor name is global to the connection.
+LOCAL - speciﬁes that the cursor name is local to the Stored Procedure, trigger, or query that holds  the cursor.
+
+***Data Fetch Option in Cursors:
+   ----------------------------
+Microsoft SQL Server supports the following two fetch options for data:
+FORWARD_ONLY - Speciﬁes that the cursor can only be scrolled from the ﬁrst to the last row.
+SCROLL - It provides 6 options to fetch the data (FIRST, LAST, PRIOR, NEXT, RELATIVE, and
+
+
