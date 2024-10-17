@@ -32,4 +32,69 @@
       INSERT INTO table_name (column1, column2, column3, ...) VALUES (value1, value2, value3, ...); 
 
 
+*****Temporary Tables:
+     ------------------
+Temporary tables are stored in tempdb. They work like a regular table in that you  can perform the operations select, insert and delete as for a regular table.
+They are speciﬁed with the preﬁx #, for example #table_name  There are 2 Types of Temporary Tables:
+1 . Local Temporary Tables
+2. Global Temporary Tables
+
+1.Local Temporary Tables:
+Local temporary tables are the tables stored in tempdb. Local temporary tables are  temporary tables that are available only to the session that created them.
+Syntax:
+create table
+#table name
+(
+column_name varchar(20)
+column_no int
+)
+
+2.Global Temporary Table:
+Global temporary tables are also stored in tempdb. Global temporary tables are  temporary tables that are available to all sessions and all users.
+They are speciﬁed  with the preﬁx #, for example ##table_name.
+Syntax
+create table ##table_name
+(
+column_name varchar(20)
+column_no int
+)
+
+***SUB QUERY:
+   ----------
+A subquery is a SQL query nested inside a larger query.
+->A subquery may occur in : SELECT, FROM, WHERE Clause
+->The subquery can be nested inside a SELECT, INSERT, UPDATE, or DELETE  statement or inside another subquery.
+->A subquery is usually added within the WHERE Clause of another SQL SELECT  statement.
+->You can use the comparison operators, such as >, <, or =. The comparison operator  can also be a multiple-row operator, such as IN, ANY, or ALL.
+Type of Subqueries
+1.Single row subquery : Returns zero or one row.
+2.Multiple row subquery : Returns one or more rows.
+3.Multiple column subqueries : Returns one or more columns.
+4.Correlated subqueries : Reference one or more columns in the outer SQL statement.  The subquery is known as a correlated subquery because the subquery is related to  the outer SQL statement.
+5.Nested subqueries : Subqueries are placed within another subquery.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
