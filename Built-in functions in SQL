@@ -1,0 +1,137 @@
+ABS                        SQRT
+POWER                      SQUARE
+ROUND                      EXP
+SIN                        LN
+COS                        LOG
+TRUN C                     CEILING
+TAN                        FLOOR
+ASIN                       SING
+ACOS
+ATAN
+
+***ABS QUERY:
+  -----------
+The ABS() function returns the absolute value of a number.
+Syntax:
+ABS(number)
+Example:
+Find the absolute value of a number:
+SELECT Abs(-243.5)AS AbsNum;
+
+***POWER QUERY:
+  -------------
+The POWER() function returns the value of a number raised to the power of another  number.
+Syntax:
+POWER(a, b)
+Example:
+Return 4 raised to the second power:  SELECT POWER(4, 2);
+
+***ROUND QUERY:
+  -------------
+The ROUND() function rounds a number to a speciﬁed number of decimal places.
+Syntax:
+ROUND(number, decimals, operation)
+Example:
+Round the number to 2 decimal places:  SELECT ROUND(235.415, 2) AS RoundValue;
+
+***SIN QUERY:
+  -----------
+The SIN() function returns the sine of a number.
+Syntax:
+SIN(number)
+Example:
+Return the sine of a number:  SELECT SIN(2);
+
+*** TURNCATE QUERY:
+  ------------------
+TRUNCATE TABLE command deletes the data inside a table, but not the table itself.
+The following SQL truncates the table "Categories":
+Example:
+TURNCATE TABLE categories;
+
+***TAN QUERT:
+  ------------
+The TAN() function returns the tangent of a number.
+Syntax: TAN(number)
+Example:
+Return the tangent of a number:  SELECT TAN(1.75);
+
+***SQRT QUERY:
+  -------------
+The SQRT() function returns the square root of a number.
+Syntax:
+SQRT(number)
+Example:
+Return the square root of a number:  SELECT SQRT(64);
+
+***SQUARE QUERY:
+   --------------
+The SQUARE() function returns the square of a number.
+Syntax:
+SQUARE(number)
+EXAMPLE:
+Return the square of a number:  SELECT SQUARE(64);
+
+***EXP QUERY:
+   ----------
+The EXP() function returns e raised to the power of a speciﬁed number.
+The constant e (2.718281...), is the base of natural logarithms.
+Syntax:
+EXP(number)
+Example:
+Return e raised to the power of 1:  SELECT EXP(1);
+
+***LN QUERY:
+   ---------
+LN() function
+SQL LN() function returns the natural logarithm of n, where n is greater than 0 and its base is  number equal to approximately 2.71828183.
+Syntax:
+LN(experssion)
+ex:
+SELECT LN(65)"natural_log of 65";
+
+***LOG QUERY:
+   ----------
+The LOG() function returns the natural logarithm of a speciﬁed number, or the logarithm of the
+number to the speciﬁed base.
+Syntax:
+LOG(number, base) -- Syntax for SQL Server
+OR:
+LOG(number) -- Syntax for Azure SQL Database, Azure SQL Data Warehouse, Parallel Data  Warehouse
+Example:
+Return the natural logarithm of 2:  SELECT LOG(2);
+
+***CELEING QUERY:
+  ----------------
+The LOG() function returns the natural logarithm of a speciﬁed number, or the logarithm of the
+number to the speciﬁed base.
+Syntax:
+LOG(number, base) -- Syntax for SQL Server
+OR:
+LOG(number) -- Syntax for Azure SQL Database, Azure SQL Data Warehouse, Parallel Data  Warehouse
+Example:
+Return the natural logarithm of 2:  SELECT LOG(2);
+
+***FLOOR QUERY:
+   ------------
+The FLOOR() function returns the largest integer value that is smaller than or equal to a number.
+Tip: Also look at the CEILING() and ROUND() functions.
+Syntax:
+FLOOR(number)
+Example:
+Return the largest integer value that is equal to or less than 25.75:  SELECT FLOOR(25.75) AS FloorValue;
+
+***SIGN QUERY:
+   -----------
+The SIGN() function returns the sign of a number.
+This function will return one of the following:
+If number > 0, it returns 1
+If number = 0, it returns 0
+If number < 0, it returns -1
+Syntax: 
+SIGN(number)
+Example:
+Return the sign of a number:  SELECT SIGN(255.5);
+
+***
+
