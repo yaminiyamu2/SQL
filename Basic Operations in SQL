@@ -138,8 +138,31 @@ SELECT column_name(s) FROM table1 UNION SELECT column_name(s) FROM table2;
 UNION ALL Syntax
 The UNION operator selects only distinct values by default. To allow duplicate values, use UNION ALL:  SELECT column_name(s) FROM table1 UNION ALL SELECT column_name(s) FROM table2;
 
+***EXISTS QUERY:
+   -------------
+The EXISTS operator is used to test for the existence of any record in a subquery.
+The EXISTS operator returns TRUE if the subquery returns one or more records.
+EXISTS Syntax:
+SELECT column_name(s) FROM table_name WHERE EXISTS  (SELECT column_name FROM table_name WHERE condition);  
 
+***ANY QUERY:
+   ----------
+The ANY operator:
+->returns a boolean value as a result
+->returns TRUE if ANY of the subquery values meet the condition
+ANY Syntax:
+SELECT column_name(s) FROM table_name WHERE column_name operator ANY (SELECT column_name
+FROM table_name WHERE condition);
 
+***ALL QUERY:
+   ----------
+The ALL operator:
+returns a boolean value as a result
+returns TRUE if ALL of the subquery values meet the condition
+is used with SELECT, WHERE and HAVING statements
+ALL Syntax With SELECT
+SELECT ALL column_name(s) FROM table_name WHERE condition;  ALL Syntax With WHERE or HAVING
+SELECT column_name(s) FROM table_name WHERE column_name operator ALL (SELECT column_name  FROM table_name WHERE condition);
 
 
 
