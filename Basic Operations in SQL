@@ -83,3 +83,71 @@ SELECT column_name(s) FROM table_name WHERE condition GROUP BY column_name(s) OR
 
 ***HAVING QUERY:
    -------------
+The HAVING cluse was added to SQL because the WHERE keyword cannot be used with aggregate funtions.
+Syntax:
+SELECT column_name  FROM table_name WERE condition GROUP BY column_name HAVING condition ORDER BY column_name;
+
+***LIKE QUERY:
+   -----------
+The LIKE operator is used in a WHERE clause to search for a speciﬁed pattern in a column.
+There are two wildcards often used in conjunction with the LIKE operator:
+The percent sign (%) represents zero, one, or multiple characters
+The underscore sign (_) represents one, single character
+Syntax:
+SELECT column1, column2, … FROM table_name WHERE columnN LIKE pattern;
+
+*** IN QUERY:
+   ----------
+The IN operator allows you to specify multiple values in a WHERE clause.
+The IN operator is a shorthand for multiple OR conditions.
+Syntax:
+SELECT column_name(s) FROM table_name WHERE column_name IN (value1, value2, ...);
+
+***BETWEEN QUERY:
+   --------------
+The BETWEEN operator selects values within a given range. The values can be numbers, text, or dates.
+The BETWEEN operator is inclusive: begin and end values are included.
+Syntax:
+SELECT column_name(s) FROM table_name WHERE column_name BETWEEN value1 AND value2;
+
+***ALIAS QUERY:
+   --------------
+SQL aliases are used to give a table, or a column in a table, a temporary name.Aliases  are often used to make column names more readable.
+Alias Column Syntax:
+SELECT column_name AS alias_name FROM table_name;
+Alias Table Syntax:
+SELECT column_name(s) FROM table_name AS alias_name;
+
+***WILDCARD QUERY:
+   ---------------
+A wildcard character is used to substitute one or more characters in a string. Wildcard characters are  used with the LIKE operator. 
+The LIKE operator is used in a WHERE clause to search for a speciﬁed  pattern in a column.
+SYMBOLS:
+*            Representing Zero or more character.
+?            Represents a single character
+[]           Represents any single character with in the brackets.
+!            Represents any character not in the brackets.
+-            Represents the any single charcter with in the specified range.
+#            Represents any single numeric character.
+
+*** UNION QUERY:
+   -------------
+The UNION operator is used to combine the result-set of two or more SELECT statements.
+UNION Syntax
+SELECT column_name(s) FROM table1 UNION SELECT column_name(s) FROM table2;
+UNION ALL Syntax
+The UNION operator selects only distinct values by default. To allow duplicate values, use UNION ALL:  SELECT column_name(s) FROM table1 UNION ALL SELECT column_name(s) FROM table2;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
