@@ -1,0 +1,41 @@
+SQL JOINS are used to retrieve data from multiple tables. A SQL JOIN is  performed when two or more tables are combined in a SQL statement.
+There are 4 diﬀerent types of SQL joins:
+SQL INNER JOIN (sometimes called simple join)
+SQL LEFT OUTER JOIN (sometimes called LEFT JOIN)
+SQL RIGHT OUTER JOIN (sometimes called RIGHT JOIN)
+SQL FULL OUTER JOIN (sometimes called FULL JOIN)
+
+***SQL INNER JOIN (simple join):
+   -----------------------------
+It is the most common type of SQL join. SQL INNER JOINS return all rows from multiple  tables where the join condition is met.
+Syntax:
+The syntax for the INNER JOIN in SQL is:
+SELECT columns FROM table1 INNER JOIN table2 ON table1.cloumn=table2.column;
+
+***SQL LEFT OUTER JOIN:
+   ------------------------
+Another type of join is called a LEFT OUTER JOIN. This type of join returns all rows  from the LEFT-hand table speciﬁed in the ON condition 
+and only those rows from the other table where the joined ﬁelds are equal (join condition is met).
+Syntax:
+The syntax for the LEFT OUTER JOIN in SQL is:
+SELECT columns FROM table1 LEFT OUTER JOIN table2 ON table1.column=table2.column;
+
+***SQL RIGHT OUTER JOIN:
+   ---------------------
+Another type of join is called a SQL RIGHT OUTER JOIN. This type of join returns all  rows from the RIGHT-hand table speciﬁed in the ON condition
+and only those rows from the other table where the joined ﬁelds are equal (join condition is met).
+Syntax:
+The syntax for the RIGHT OUTER JOIN in SQL is:
+SELECT columns FROM table1 RIGHT OUTER JOIN table2 ON table1.column=table2.column;
+
+***SQL FULL OUTER JOIN:
+   ---------------------
+Another type of join is called a SQL FULL OUTER JOIN. This type of join returns  all rows from the LEFT-hand table and RIGHT-hand table
+with NULL values in  place where the join condition is not met.
+Syntax:
+The syntax for the SQL FULL OUTER JOIN is:
+SELECT columns FROM table1 FULL OUTER JOIN table2 ON table1.column=table2.column;
+
+
+
+
