@@ -1,0 +1,113 @@
+OVER
+COUNT
+SUM
+ROW-NUMBER
+RANK
+DENSE-RANK
+LEAD
+LAG
+
+***OVER QUERY:
+   -----------
+The OVER clause is used to determine which rows from the query are applied to the function, what  order they are evaluated in by that function
+The syntax of the OVER clause is:
+<function> OVER (	[PARTITION BY clause]  [ORDER BY clause] [ROWS or RANGE clause])
+Example:
+SELECT Object_id,= min(objrct_id)over(),[max] =max(object_id)over()[min]sys.objects;
+
+***COUNT QUERY:
+   ------------
+The COUNT() function returns the number of records returned by a select query.
+Note: NULL values are not counted.
+Syntax:  
+COUNT(expression)
+Example:
+Return the number of products in the "Products" table:
+SELECT COUNT(ProductID) AS NumberOfProducts FROM Products;
+
+***SUM QUERY:
+  -----------
+The SUM() function calculates the sum of a set of values.
+Note: NULL values are ignored.
+Syntax:
+SUM(expression)
+Example:
+Return the sum of the "Quantity" ﬁeld in the "OrderDetails" table:  
+SELECT SUM(Quantity) AS TotalItemsOrdered FROM OrderDetails
+
+***ROW NUMBER QUERY:
+  ------------------
+SQL statement shows the equivalent example using ROWNUM ():
+EX:
+SELECT*FROM Customers
+WHERE ROWNUM<=3;
+
+***RANK QUERY:
+   -----------
+The RANK() function is a window function that assigns a rank to each row within a partition of a  result set.
+Syntax:
+RANK() OVER ( [PARTITION BY partition_expression, ... ]  ORDER BY sort_expression [ASC | DESC], ... )
+Example:
+SELECT v,  RANK ()
+OVER ( ORDER BY v )
+rank_no FROM sales.rank_demo;
+
+***DENSE RANK QUERY:
+The DENSE_RANK() is a window function that assigns a rank to each row within a partition of  a result set. Unlike the RANK() function, the DENSE_RANK() function returns consecutive  rank values. Rows in each partition receive the same ranks if they have the same values.
+Syntax of the DENSE_RANK() function
+DENSE_RANK() OVER ([PARTITION BY partition_expression, ... ]  ORDER BY sort_expression [ASC | DESC], ... )
+Example:
+CREATE TABLE sales.dense_rank_demo ( v VARCHAR(10) ); INSERT INTO  sales.dense_rank_demo(v) VALUES('A'),('B'),('B'),('C'),('C'),('D'),('E');
+SELECT * FROM sales.dense_rank_demo;
+
+***LEAD QUERY:
+   -----------
+LEAD() is a window function that provides access to a row at a speciﬁed physical oﬀset which  follows the current row. By using the LEAD() function, from the current row, you can access  data of the next row, or the row after the next row, and so on.
+Syntax:
+LEAD(return_value ,oﬀset [,default])
+OVER ( [PARTITION BY partition_expression, ... ]  ORDER BY sort_expression [ASC | DESC], ... ) 
+Example:
+SELECT month, net_sales, LEAD(net_sales,1) OVER ( ORDER BY month ) next_month_sale
+
+***LAG QUERY:
+   ----------
+LAG() is a window function that provides access to a row at a speciﬁed physical oﬀset which comes  before the current row.
+By using the LAG() function, from the current row, you can access data of the previous row, or the  row before the previous row, and so on.
+Syntax:
+LAG(return_value ,oﬀset [,default])
+OVER ( [PARTITION BY partition_expression, ... ]  ORDER BY sort_expression [ASC | DESC], ... )
+Example:
+SELECT month, brand_name, net_sales, LAG(net_sales,1) OVER ( PARTITION BY brand_name  ORDER BY month ) previous_sales FROM sales.vw_netsales_brands WHERE year = 2018
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

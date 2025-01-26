@@ -1,0 +1,33 @@
+*** Creating a View:
+    -----------------
+Views in SQL are kind of virtual tables. A view also has rows and columns as they are in a  real table in the database. 
+We can create a view by selecting ﬁelds from one or more tables  present in the database. 
+A View can either have all the rows of a table or speciﬁc rows  based on certain condition.
+Syntax:
+CREATE VIEW view_name AS  SELECT column1, column2.....  FROM table_name
+WHERE condition;
+view_name: Name for the View  table_name: Name of the table  condition: Condition to select rows
+
+***Deleting a view:
+   ----------------
+We have learned about creating a View, but what if a created View is not needed any  more? Obviously we will want to delete it. 
+SQL allows us to delete an existing View. We  can delete or drop a View using the DROP statement.
+Syntax:
+DROP VIEW view_name;
+Example:
+DROP VIEW [Brazil Customers];
+
+***Update a View:
+   ---------------
+There are certain conditions needed to be satisﬁed to update a view. If any one of these  conditions is not met, 
+then we will not be allowed to update the view.
+Syntax:
+CREATE OR REPLACE VIEW view_name AS  SELECT column1, column2, ..
+FROM table_name  WHERE condition;
+Example
+CREATE OR REPLACE VIEW [Brazil Customers] AS  SELECT CustomerName, ContactName, City
+FROM Customers
+WHERE Country = 'Brazil';
+
+
+

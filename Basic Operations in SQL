@@ -1,0 +1,176 @@
+Select                                            Like
+Update                                            In
+Delete                                            Between
+Where                                             Alias
+Null Values                                       Wildcards
+AND , OR, NOT                                     Union
+ORDER BY                                          Exists
+GROUP BY                                          Any,All
+Insert Into                                       select into
+HAVING                                            Insert into select
+
+***Select Query:
+   ---------------
+The SELECT statement is used to select data from a database.
+Two Types of SELECT’s
+SELECT	: The SELECT statement is used to select data from  a database.
+SELECT DISTINCT : The SELECT DISTINCT statement is used  to return only distinct (diﬀerent) values.
+
+-->SELECT QUARY:
+    Syntax:
+    SELECT column1, column2, ... FROM table_name;
+    SELECT * FROM table_name;
+-->SELECT DISTINCT:
+    Syntax:
+    SELECT DISTINCT	column1, column2, ... FROM  table_name;
+    SELECT COUNT(DISTINCT Column)* FROM table_name;
+
+***UPDATE QUERY:
+   --------------
+The UPDATE statement is used to modify the existing records in a table.
+Syntax:
+UPDATE table_name SET column1 = value1, column2 = value2, ...WHERE condition;
+
+***DELETE QUERY:
+   -------------
+The DELETE statement is used to delete existing records in a table.
+Syntax:
+DELETE FROM table_name WHERE condition;
+
+***WHERE CLAUSE QUERY:
+   -------------------
+The WHERE cliuse is uded to filter records. It is used to extract only those records that fullfill a specified condition.
+syntax:
+SELECT column1,cloumn2,.... FROM table_name WHERE condition;
+
+***NULL VALUES QUERY:
+   ------------------
+A ﬁeld with a NULL value is a ﬁeld with no value. If a ﬁeld in a table is optional, it is possible to insert  a new record or update a record without adding a value to this ﬁeld. Then, the ﬁeld will be saved with  a NULL value.
+IS NULL:
+SELECT column_names  FROM table_name	WHERE column_name IS NULL;
+SELECT CustomerName, ContactName, Address FROM Customers WHERE Address IS NULL;
+IS NOT NULL:
+SELECT column_names FROM table_name WHERE column_name IS NOT NULL;
+SELECT CustomerName, ContactName, Address FROM Customers WHERE Address IS NOT NULL;
+
+***AND QUERY:
+   ---------
+syntax:
+SELECT column1,cloumn2,....FROM table_name WHERE condition1 AND condition2....;
+
+***OR QUERY:
+   --------
+Syntx:
+SELECT cloumn1,cloumn2..... FROM table_name WHERE condition1 OR condition2;
+
+***NOT QUERY:
+   -----------
+Syntax:
+SELECT cloumn1,cloumn2,...FROM table_name WHERE NOT condition;
+
+***ORDER BY QUERY:
+   ---------------
+The ORDER BY keyword is used to sort the result-set in ascending or descending order.
+The ORDER BY keyword sorts the records in ascending order by default. To sort the records  in descending order, use the DESC keyword.
+ORDER BY Syntax
+SELECT column1, column2, … FROM table_name ORDER BY column1, column2, ... ASC|DESC;
+
+***GROUP BY QUERY:
+   ---------------
+The GROUP BY statement groups rows that have the same values into summary rows, like "ﬁnd  the number of customers in each country".
+GROUP BY Syntax
+SELECT column_name(s) FROM table_name WHERE condition GROUP BY column_name(s) ORDER BY column_name(s);
+
+***HAVING QUERY:
+   -------------
+The HAVING cluse was added to SQL because the WHERE keyword cannot be used with aggregate funtions.
+Syntax:
+SELECT column_name  FROM table_name WERE condition GROUP BY column_name HAVING condition ORDER BY column_name;
+
+***LIKE QUERY:
+   -----------
+The LIKE operator is used in a WHERE clause to search for a speciﬁed pattern in a column.
+There are two wildcards often used in conjunction with the LIKE operator:
+The percent sign (%) represents zero, one, or multiple characters
+The underscore sign (_) represents one, single character
+Syntax:
+SELECT column1, column2, … FROM table_name WHERE columnN LIKE pattern;
+
+*** IN QUERY:
+   ----------
+The IN operator allows you to specify multiple values in a WHERE clause.
+The IN operator is a shorthand for multiple OR conditions.
+Syntax:
+SELECT column_name(s) FROM table_name WHERE column_name IN (value1, value2, ...);
+
+***BETWEEN QUERY:
+   --------------
+The BETWEEN operator selects values within a given range. The values can be numbers, text, or dates.
+The BETWEEN operator is inclusive: begin and end values are included.
+Syntax:
+SELECT column_name(s) FROM table_name WHERE column_name BETWEEN value1 AND value2;
+
+***ALIAS QUERY:
+   --------------
+SQL aliases are used to give a table, or a column in a table, a temporary name.Aliases  are often used to make column names more readable.
+Alias Column Syntax:
+SELECT column_name AS alias_name FROM table_name;
+Alias Table Syntax:
+SELECT column_name(s) FROM table_name AS alias_name;
+
+***WILDCARD QUERY:
+   ---------------
+A wildcard character is used to substitute one or more characters in a string. Wildcard characters are  used with the LIKE operator. 
+The LIKE operator is used in a WHERE clause to search for a speciﬁed  pattern in a column.
+SYMBOLS:
+*            Representing Zero or more character.
+?            Represents a single character
+[]           Represents any single character with in the brackets.
+!            Represents any character not in the brackets.
+-            Represents the any single charcter with in the specified range.
+#            Represents any single numeric character.
+
+*** UNION QUERY:
+   -------------
+The UNION operator is used to combine the result-set of two or more SELECT statements.
+UNION Syntax
+SELECT column_name(s) FROM table1 UNION SELECT column_name(s) FROM table2;
+UNION ALL Syntax
+The UNION operator selects only distinct values by default. To allow duplicate values, use UNION ALL:  SELECT column_name(s) FROM table1 UNION ALL SELECT column_name(s) FROM table2;
+
+***EXISTS QUERY:
+   -------------
+The EXISTS operator is used to test for the existence of any record in a subquery.
+The EXISTS operator returns TRUE if the subquery returns one or more records.
+EXISTS Syntax:
+SELECT column_name(s) FROM table_name WHERE EXISTS  (SELECT column_name FROM table_name WHERE condition);  
+
+***ANY QUERY:
+   ----------
+The ANY operator:
+->returns a boolean value as a result
+->returns TRUE if ANY of the subquery values meet the condition
+ANY Syntax:
+SELECT column_name(s) FROM table_name WHERE column_name operator ANY (SELECT column_name
+FROM table_name WHERE condition);
+
+***ALL QUERY:
+   ----------
+The ALL operator:
+returns a boolean value as a result
+returns TRUE if ALL of the subquery values meet the condition
+is used with SELECT, WHERE and HAVING statements
+ALL Syntax With SELECT
+SELECT ALL column_name(s) FROM table_name WHERE condition;  ALL Syntax With WHERE or HAVING
+SELECT column_name(s) FROM table_name WHERE column_name operator ALL (SELECT column_name  FROM table_name WHERE condition);
+
+
+
+
+
+
+
+
+
+
+

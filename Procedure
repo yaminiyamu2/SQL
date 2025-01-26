@@ -1,0 +1,12 @@
+What is a	Procedure?
+Procedures are the subprograms which can be created and saved in the database as database  objects.
+A procedure in SQL (often referred to as stored procedure), is a reusable unit that  encapsulates the speciﬁc business logic of the application.
+A SQL procedure is a group of  SQL statements and logic, compiled and stored together to perform a speciﬁc task.
+
+Procedure Syntax:
+
+CREATE [ OR REPLACE] PROCEDURE procedure_name [  (parameter_name [IN | OUT | IN OUT] type [ ])]
+{IS | AS }
+BEGIN [declaration_section]  executable_section
+//SQL statement used in the stored procedure  END
+GO

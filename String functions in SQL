@@ -1,0 +1,122 @@
+INITCAP                  RTRIM
+LOWER                    REPLACE
+UPPER                    SUBSTER
+CONCAT                   LENGTH
+LPAD                     INSTR
+RPAD
+LTRIM
+
+***INITCAP QUERY:
+   --------------
+SQL INITCAP() Function return capitalize string/char (capitalize ﬁrst letter of each word).
+Syntax:
+INITCAP(string);
+ex:
+Consider following example return the capitalize string of given string argument.
+SQL> SELECT INITCAP('opal kole') "INITCAP" FROM DUAL;
+
+***LOWER QUERY:
+   ------------
+The LOWER() function converts a string to lower-case.
+Syntax:
+LOWER(text)
+Convert the text to lower-case:
+SELECT LOWER('SQL Tutorial is FUN!');
+
+***UPPER QUERY:
+   ------------
+The UPPER() function converts a string to upper-case.
+Syntax:
+UPPER(text)
+Example:
+Convert the text to upper-case:
+SELECT UPPER('SQL Tutorial is FUN!');
+
+***CONCAT QUERY:
+  ---------------
+The CONCAT() function adds two or more strings together.
+Syntax:
+CONCAT(string1, string2, ...., string_n)
+Example:
+Add two strings together:
+SELECT CONCAT('google', '.com');
+Output : google.co
+
+***LTRIM QUERY:
+   ------------
+The Note LTRIM() function removes leading spaces from a string.
+Syntax:
+LTRIM(string)
+Example:
+Remove leading spaces from a string:
+SELECT LTRIM("	SQL Tutorial") AS LeftTrimmedString;
+
+***RTRIM QUERY:
+   ------------
+The RTRIM() function removes trailing spaces from a string.
+Syntax:
+RTRIM(string)
+Example:
+Remove trailing spaces from a string:  SELECT RTRIM("SQL Tutorial") AS RightTrimmedString;
+
+***REPLACE QUERY:
+   --------------
+The REPLACE() function replaces all occurrences of a substring within a string, with a new  substring.
+Note: This function performs a case-sensitive replacement.
+Syntax:
+REPLACE(string, from_string, new_string)
+Example:
+Replace "SQL" with "HTML":
+SELECT REPLACE("SQL Tutorial", "SQL", "HTML");
+
+*** SUBSTR QUERY:
+    -------------
+The SUBSTR() function extracts a substring from a string (starting at any position).
+Syntax:
+SUBSTR(string, start, length)
+OR:
+SUBSTR(string FROM start FOR length)
+Example:
+Extract a substring from a string (start at position 5, extract 3 characters):  SELECT SUBSTR("SQL Tutorial", 5, 3) AS ExtractString;
+
+***LENGTH QUERY:
+   -------------
+The LENGTH() function returns the length of a string (in bytes).
+Syntax:
+LENGTH(string)
+Example:
+Return the length of the string, in bytes:
+SELECT LENGTH("SQL Tutorial") AS LengthOfString;
+
+***INSTR QUERY:
+   ------------
+The INSTR() function returns the position of the ﬁrst occurrence of a string in another string.
+This function performs a case-insensitive search.
+Syntax:
+INSTR(string1, string2)
+Example:
+Search for "3" in string "W3Schools.com", and return position:  
+SELECT INSTR(“google.com", "g") AS MatchPosition;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
